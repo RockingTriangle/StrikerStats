@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Striker Stats HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StrikerStatsHomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StrikerStatsHomeVC" customModule="StrikerStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="IZb-4f-6mJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StrikerStats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-tt-X9v" userLabel="StrikerStatsTitleLabel">
+                                <rect key="frame" x="20" y="64" width="374" height="62.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Hx-8j-7DK" userLabel="CardsStackView">
+                                <rect key="frame" x="31" y="146.5" width="352" height="165"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEb-UK-uzg" userLabel="GoalsView">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hMG-2O-wI1" userLabel="GoalsInfoStackView">
+                                                <rect key="frame" x="10" y="10" width="145" height="145"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZV-vZ-6Tv" userLabel="GoalsTitleLabel">
+                                                        <rect key="frame" x="10" y="0.0" width="125" height="36.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vol-9l-mHP" userLabel="GoalsValueLabel">
+                                                        <rect key="frame" x="10" y="36.5" width="125" height="108.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="72"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="QZV-vZ-6Tv" secondAttribute="trailing" constant="10" id="5rL-Ob-Ggf"/>
+                                                    <constraint firstItem="vol-9l-mHP" firstAttribute="leading" secondItem="hMG-2O-wI1" secondAttribute="leading" constant="10" id="8wd-ly-qt5"/>
+                                                    <constraint firstAttribute="width" secondItem="hMG-2O-wI1" secondAttribute="height" id="WEN-0k-jaP"/>
+                                                    <constraint firstItem="QZV-vZ-6Tv" firstAttribute="leading" secondItem="hMG-2O-wI1" secondAttribute="leading" constant="10" id="awV-s2-19O"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vol-9l-mHP" secondAttribute="trailing" constant="10" id="wTG-dP-COo"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="grassGreen"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hMG-2O-wI1" secondAttribute="bottom" constant="10" id="8lB-La-4Kl"/>
+                                            <constraint firstItem="hMG-2O-wI1" firstAttribute="leading" secondItem="uEb-UK-uzg" secondAttribute="leading" constant="10" id="as2-3u-iUH"/>
+                                            <constraint firstItem="hMG-2O-wI1" firstAttribute="top" secondItem="uEb-UK-uzg" secondAttribute="top" constant="10" id="jQv-wW-H5Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="hMG-2O-wI1" secondAttribute="trailing" constant="10" id="r9I-s2-vbG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-c2-50A" userLabel="AssistsView">
+                                        <rect key="frame" x="187" y="0.0" width="165" height="165"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-kS-gQj" userLabel="AssistsInfoStackView">
+                                                <rect key="frame" x="10" y="10" width="145" height="145"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSISTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-Op-fUv" userLabel="AssistsTitleLabel">
+                                                        <rect key="frame" x="10" y="0.0" width="125" height="36.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFe-mk-voG" userLabel="AssistsValueLabel">
+                                                        <rect key="frame" x="10" y="36.5" width="125" height="108.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="72"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="WFe-mk-voG" secondAttribute="trailing" constant="10" id="2q1-N7-SNG"/>
+                                                    <constraint firstAttribute="width" secondItem="EdW-kS-gQj" secondAttribute="height" id="D34-QT-j72"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CDp-Op-fUv" secondAttribute="trailing" constant="10" id="Dh0-Kh-Pbv"/>
+                                                    <constraint firstItem="WFe-mk-voG" firstAttribute="leading" secondItem="EdW-kS-gQj" secondAttribute="leading" constant="10" id="O6Q-S3-yft"/>
+                                                    <constraint firstItem="CDp-Op-fUv" firstAttribute="leading" secondItem="EdW-kS-gQj" secondAttribute="leading" constant="10" id="ztP-Nj-nVt"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="grassGreen"/>
+                                        <constraints>
+                                            <constraint firstItem="EdW-kS-gQj" firstAttribute="top" secondItem="ghC-c2-50A" secondAttribute="top" constant="10" id="EHz-oO-owh"/>
+                                            <constraint firstAttribute="trailing" secondItem="EdW-kS-gQj" secondAttribute="trailing" constant="10" id="F8j-PA-ghx"/>
+                                            <constraint firstItem="EdW-kS-gQj" firstAttribute="leading" secondItem="ghC-c2-50A" secondAttribute="leading" constant="10" id="dRh-rE-chX"/>
+                                            <constraint firstAttribute="bottom" secondItem="EdW-kS-gQj" secondAttribute="bottom" constant="10" id="wXI-OJ-7L2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-OD-zP6" userLabel="GoalsStepper" customClass="SS_Stepper" customModule="StrikerStats" customModuleProvider="target">
+                                <rect key="frame" x="66.5" y="331.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="goalsStepperWasTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="l4i-SS-s5l"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-CJ-GIK" userLabel="AssistsStepper" customClass="SS_Stepper" customModule="StrikerStats" customModuleProvider="target">
+                                <rect key="frame" x="253.5" y="331.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="assistsStepperWasTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="VLp-Dl-p3i"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YE8-CJ-GIK" firstAttribute="centerX" secondItem="EdW-kS-gQj" secondAttribute="centerX" id="45w-WS-oOa"/>
+                            <constraint firstItem="jFQ-tt-X9v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7qX-ya-Yfz"/>
+                            <constraint firstItem="9Hx-8j-7DK" firstAttribute="top" secondItem="jFQ-tt-X9v" secondAttribute="bottom" constant="20" id="7qh-UL-ily"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jFQ-tt-X9v" secondAttribute="trailing" constant="20" id="8DA-8I-LlV"/>
+                            <constraint firstAttribute="trailing" secondItem="IZb-4f-6mJ" secondAttribute="trailing" id="BUi-9K-jHB"/>
+                            <constraint firstItem="eDU-OD-zP6" firstAttribute="centerX" secondItem="hMG-2O-wI1" secondAttribute="centerX" id="BfS-VZ-auv"/>
+                            <constraint firstItem="YE8-CJ-GIK" firstAttribute="top" secondItem="9Hx-8j-7DK" secondAttribute="bottom" constant="20" id="DOq-d6-icu"/>
+                            <constraint firstItem="9Hx-8j-7DK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7v-DS-Uw4"/>
+                            <constraint firstItem="eDU-OD-zP6" firstAttribute="centerY" secondItem="YE8-CJ-GIK" secondAttribute="centerY" id="LQm-aF-22S"/>
+                            <constraint firstItem="eDU-OD-zP6" firstAttribute="top" secondItem="9Hx-8j-7DK" secondAttribute="bottom" constant="20" id="PEy-bm-Em7"/>
+                            <constraint firstAttribute="bottom" secondItem="IZb-4f-6mJ" secondAttribute="bottom" id="RwZ-4c-3R1"/>
+                            <constraint firstItem="IZb-4f-6mJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UGc-J4-bwv"/>
+                            <constraint firstItem="jFQ-tt-X9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eoJ-7e-d1v"/>
+                            <constraint firstItem="EdW-kS-gQj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.35" id="fX7-uS-sXL"/>
+                            <constraint firstItem="hMG-2O-wI1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.35" id="kWH-hN-Zws"/>
+                            <constraint firstItem="IZb-4f-6mJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nIW-Df-qts"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="assistsStepper" destination="YE8-CJ-GIK" id="6FU-QU-050"/>
+                        <outlet property="assistsValueLabel" destination="WFe-mk-voG" id="U1N-jw-6tN"/>
+                        <outlet property="assistsView" destination="ghC-c2-50A" id="ntQ-sc-zTv"/>
+                        <outlet property="goalsStepper" destination="eDU-OD-zP6" id="Gwf-1C-sIg"/>
+                        <outlet property="goalsValueLabel" destination="vol-9l-mHP" id="Brx-cc-cmk"/>
+                        <outlet property="goalsView" destination="uEb-UK-uzg" id="in7-Gx-DFG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImage" width="414" height="896"/>
+        <namedColor name="grassGreen">
+            <color red="0.24099999666213989" green="0.71700000762939453" blue="0.0020000000949949026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
